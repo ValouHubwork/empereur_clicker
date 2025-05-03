@@ -1,0 +1,146 @@
+body{
+    margin: auto;
+    width: 600px;
+    background-color: pink;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column; /* aligne les enfants verticalement */
+    justify-content: center;
+    align-items: center;
+}
+
+.noselect {
+    /* désactive toute sélection */
+    user-select: none;        /* Standard */
+    -webkit-user-select: none; /* Safari/Chrome */
+    -moz-user-select: none;    /* Firefox */
+    -ms-user-select: none;     /* IE/Edge Legacy */
+}
+
+#counter
+{
+    font-weight: bolder;
+    font-size: 31px;
+}
+
+.empereur
+{
+    text-align: center;
+    margin-bottom: 150px;
+}
+
+.empereur_img
+{
+    width: 500px;
+    height: auto;
+    transition: 0.2s;
+}
+
+.empereur p
+{
+    font-size: 21px;
+}
+
+.empereur_clicked
+{
+    width: 504px;
+    height: auto;
+    transition: 0.1s;
+}
+
+.upgrade_container
+{
+    width: 700px;
+    visibility: hidden;
+    display: flex;
+    align-items: center;
+    gap:20px;
+    border: 1px solid black;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    margin-bottom: 5px;
+    background: url(./ressources/img/fond_upgrade.jpg);
+}
+
+.upgrade_content
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.upgrade_img
+{
+    width:300px;
+    height: auto;
+}
+
+.upgrade_visible
+{
+    visibility: visible;
+    opacity: 0.8;
+}
+
+.upgrade_visible:hover
+{
+    opacity: 1;
+}
+
+.upgrade_title, .upgrade_number
+{
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+}
+
+.upgrade_number
+{
+    margin-left: auto;
+    margin-right: 15px;
+    font-size: 48px;
+}
+
+.upgrade_price
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    margin-top: -8px;
+}
+
+#cpt_pps
+{
+    margin-top: -23px;
+    font-size: 18px;
+}
+
+@keyframes increment_animation
+{
+   from
+   {
+    opacity: 1;
+    transform: translateY(-50%);
+   }
+   to
+   {
+    opacity: 0;
+    transform: translateY(-85%);
+   }
+}
+
+.increment
+{
+    position: absolute;
+    visibility: hidden;
+    transform: translate(-50%, -50%);
+    transition: 0.05s;
+    pointer-events: none;
+    animation: none;
+    font-size: 21px;
+}
+
+.citation_upgrade
+{
+    font-size: 14px;
+    font-style: italic;
+
+}
